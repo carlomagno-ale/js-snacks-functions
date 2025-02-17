@@ -6,6 +6,7 @@ const word = 'javascript';
 // Dichiara la funzione qui.
 
 let result = 0
+const wordletters = [];
 
 function countVocals(letter) {
 
@@ -16,6 +17,7 @@ function countVocals(letter) {
        if ( singleLetter === 'a' || singleLetter === 'e' || singleLetter === 'i' || singleLetter === 'o' || singleLetter === 'u'){
 
        result++
+       wordletters.push(letter[i])
 
        }
     }
@@ -26,7 +28,8 @@ function countVocals(letter) {
 // Invoca la funzione qui e stampa il risultato in console
 
 countVocals(word);
-console.log(result);
+console.log(result, wordletters);
+
 
 
 //Risultato atteso se si passa 'javascript': 3 (a, a, i)
